@@ -25,10 +25,14 @@ import { RegisterComponent } from './form-login/register/register.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { LoginComponent } from './form-login/login/login.component';
+import { UserAccountComponent } from './form-login/user-account/user-account.component';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
   {path: 'register', component: RegisterComponent, data: {title: 'Register'}},
+  {path: 'login', component: LoginComponent, data: {title: 'Login'}},
+  {path: 'user-account', component: UserAccountComponent, data: {title: 'UserAccount'}},
   {
     path: 'guide/getting-started',
     component: GettingStartedComponent,
@@ -37,7 +41,7 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GettingStartedComponent, RegisterComponent],
+  declarations: [AppComponent, HomeComponent, GettingStartedComponent, RegisterComponent, LoginComponent, UserAccountComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

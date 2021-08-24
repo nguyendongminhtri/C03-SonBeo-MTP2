@@ -4,7 +4,7 @@
             <mat-card style="margin: 50px 0">
                 <form class="form-register" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()" novalidate>
                     <mat-error class="alert alert-primary">{{status}}
-                        <button *ngIf="isRegisterSuccess" mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary">Login
+                        <button *ngIf="isRegisterSuccess" mat-stroked-button color="accent" routerLink="/login" class="mat-button-toggle-group btn-outline-primary">Login
                             <mat-icon color="accent" matSuffix>login</mat-icon>
                         </button>
                     </mat-error>
