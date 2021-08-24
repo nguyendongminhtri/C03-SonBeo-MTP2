@@ -16,11 +16,13 @@ import {TokenService} from '../../service/token.service';
 })
 export class NavBarComponent implements OnInit{
   isLogin = false;
+  name: string;
   constructor(private tokenService: TokenService) {
   }
   ngOnInit(): void {
     if(this.tokenService.getToken()){
       this.isLogin = true;
+      this.name = this.tokenService.getName();
     }
   }
 }
