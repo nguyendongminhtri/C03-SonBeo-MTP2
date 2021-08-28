@@ -27,6 +27,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './form-login/login/login.component';
 import { UserAccountComponent } from './form-login/user-account/user-account.component';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import {AngularFireModule} from '@angular/fire/compat';
+import {environment} from '../environments/environment.prod';
+// import {UploadAvatarComponent} from './upload/upload-avatar/upload-avatar.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
@@ -56,7 +61,9 @@ export const appRoutes: Routes = [
     BrowserAnimationsModule,
     NavBarModule, FooterModule,
     NgxAudioPlayerModule,
-    RouterModule.forRoot(appRoutes, {useHash: false}), FormsModule, MatFormFieldModule, ReactiveFormsModule
+    // AngularFireStorageModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    RouterModule.forRoot(appRoutes, {useHash: false}), FormsModule, MatFormFieldModule, ReactiveFormsModule, MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
